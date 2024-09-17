@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Bootstrap Instagram Feed</title>
+</head>
+
+<body>
+
+
+  <!--Navbar starts-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#"><span><i class="fa-brands fa-instagram fa-2x ms-5"></i></span></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fa-lg" aria-current="page" href="#">Instagram</a>
+          </li>
+        </ul>
+
+        <!--Modal Start-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Create a new post
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <!--Modal Body-->
+              <div class="modal-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Caption</label>
+                    <textarea class="form-control" id="captionTextarea" rows="5"
+                      placeholder="Add the caption of your post here"></textarea>
+
+                    <div class="icons my-2 fa-2x">
+                      <span><i class="fa-solid fa-camera"></i></span>
+                      <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                </form>
+              </div>
+
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Modal End-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <span><i class="fa-solid fa-gear"></i></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+  </nav>
+  <!--Navbar ends-->
+
+  <!--Navs & Tabs begins-->
+  <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+        aria-controls="home" aria-selected="true">Feed</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+        aria-controls="profile" aria-selected="false">Post</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <!--Gallery ICON Page starts-->
+    <div class="tab-pane fade show active d-flex justify-content-center" id="home" role="tabpanel"
+      aria-labelledby="home-tab">
+
+      <!--gallery begins-->
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card my-3" style="width: 26rem;">
+              <img src="https://lp-cms-production.imgix.net/2021-06/shutterstockRF_662032261.jpg"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Dubrovnik">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://media.istockphoto.com/id/1372050509/photo/young-people-playing-beach-soccer-during-sunset.jpg?s=612x612&w=0&k=20&c=5bH2_OZbgEzjvl1-uRUS1mPmq6_K3rHQuvT2Ayxc78A="
+                class="card-img-top img-fluid" style="height: 370px;" alt="Football at the beach">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://www.usatoday.com/gcdn/media/2017/09/25/USATODAY/USATODAY/636419679945971022-636397004964775602-GettyImages-539441424.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Dog looking out of the car window">
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card my-3" style="width: 26rem;">
+              <img src="https://pbs.twimg.com/media/E6i5cguUcAAXAH0.jpg" class="card-img-top img-fluid"
+                style="height: 370px;" alt="Working out of the office">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Proper breakfast">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/484316702.jpg?k=2c59bb56b3ffd4257a7ecec1ea87c5f8a7bf106fe092c8930d35c39116f550f8&o=&hp=1"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Calella de Palafrugell">
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/026/846/309/small_2x/portrait-of-smiling-handsome-happy-man-with-a-glass-of-beer-on-the-beach-made-with-generative-ai-photo.jpg"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Beer while relaxing in the beach">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://hips.hearstapps.com/hmg-prod/images/barcelona-city-skyline-with-sagrada-familia-royalty-free-image-1692960079.jpg?crop=0.6662xw:1xh;center,top&resize=640:*"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Barcelona overview">
+            </div>
+            <div class="card my-3" style="width: 26rem;">
+              <img
+                src="https://img.freepik.com/premium-photo/friends-had-drinking-party-got-drunk-while-driving-along-way_73899-20679.jpg"
+                class="card-img-top img-fluid" style="height: 370px;" alt="Friends">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--gallery ends-->
+
+    </div>
+    <!--Gallery ICON Page ends-->
+
+    <!--Post feed ICON starts-->
+    <div class="tab-pane fade d-flex justify-content-center" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="tab-pane fade show active d-flex justify-content-center" id="home" role="tabpanel"
+        aria-labelledby="home-tab">
+
+        <!--Post Feed begins-->
+        <div class="container-fluid d-flex justify-content-center">
+          <div class="row">
+
+            <!--1st Post start-->
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Summer in Croatia</h2>
+                      <p>06/06</p>
+                    </div>
+                    <img src="https://lp-cms-production.imgix.net/2021-06/shutterstockRF_662032261.jpg"
+                      class="card-img-top img-fluid" alt="Dubrovnik">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>111 likes</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--1st Post end-->
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Working</h2>
+                      <p>06/07</p>
+                    </div>
+                    <img src="https://pbs.twimg.com/media/E6i5cguUcAAXAH0.jpg" class="card-img-top img-fluid"
+                      alt="Working out of office">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>89 likes</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Still working</h2>
+                      <p>06/08</p>
+                    </div>
+                    <img
+                      src="https://static.vecteezy.com/system/resources/thumbnails/026/846/309/small_2x/portrait-of-smiling-handsome-happy-man-with-a-glass-of-beer-on-the-beach-made-with-generative-ai-photo.jpg"
+                      class="card-img-top img-fluid" alt="Beer while relaxing at the beach">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>liked by boss and 122 others</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>At the evening is football</h2>
+                      <p>06/09</p>
+                    </div>
+                    <img
+                      src="https://media.istockphoto.com/id/1372050509/photo/young-people-playing-beach-soccer-during-sunset.jpg?s=612x612&w=0&k=20&c=5bH2_OZbgEzjvl1-uRUS1mPmq6_K3rHQuvT2Ayxc78A="
+                      class="card-img-top img-fluid" alt="Football at the beach">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>89 likes</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>The proper breakfast</h2>
+                      <p>06/10</p>
+                    </div>
+                    <img
+                      src="https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg"
+                      class="card-img-top img-fluid" alt="Breakfast">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>5216515 likes</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Renting a helicopter</h2>
+                      <p>06/11</p>
+                    </div>
+                    <img
+                      src="https://hips.hearstapps.com/hmg-prod/images/barcelona-city-skyline-with-sagrada-familia-royalty-free-image-1692960079.jpg?crop=0.6662xw:1xh;center,top&resize=640:*"
+                      class="card-img-top img-fluid" alt="Birdseye view to Barcelona">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>1 like</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Found a dog</h2>
+                      <p>06/12</p>
+                    </div>
+                    <img
+                      src="https://www.usatoday.com/gcdn/media/2017/09/25/USATODAY/USATODAY/636419679945971022-636397004964775602-GettyImages-539441424.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp"
+                      class="card-img-top img-fluid" alt="dog looking out of the window">
+                    <div class="card-body">
+                      <div class="bottom">
+                        <p class="card-title"><strong>1165541 likes</strong></p>
+                        <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                          quibusdam
+                          ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                          perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card container-fluid py-3">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                  <div class="card">
+                    <div class="top d-flex justify-content-between p-3">
+                      <h2>Made it to Costa Brava</h2>
+                      <p>06/16</p>
+                    </div>
+                    <img
+                      src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/484316702.jpg?k=2c59bb56b3ffd4257a7ecec1ea87c5f8a7bf106fe092c8930d35c39116f550f8&o=&hp=1"
+                      class="card-img-top img-fluid" alt="Calella de Palafrugell">
+                    <div class="card-body">
+                    <div class="bottom">
+                      <p class="card-title"><strong>80 likes</strong></p>
+                      <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                        quibusdam
+                        ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                        perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card container-fluid py-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card">
+                  <div class="top d-flex justify-content-between p-3">
+                    <h2>I am at the backseat</h2>
+                    <p>06/19</p>
+                  </div>
+                  <img
+                    src="https://img.freepik.com/premium-photo/friends-had-drinking-party-got-drunk-while-driving-along-way_73899-20679.jpg"
+                    class="card-img-top img-fluid" alt="driving with friends">
+                  <div class="card-body">
+                    <div class="bottom">
+                      <p class="card-title"><strong>3 likes</strong></p>
+                      <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum
+                        quibusdam
+                        ad vero doloribus placeat illo iste repellendus consectetur, aliquam quia, iure voluptate
+                        perspiciatis, dolorum sit adipisci debitis alias officia!</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--Post Feed ends-->
+    </div>
+    <!--Post feed ICON ends-->
+
+  </div>
+
+  <!--Navs & Tabs Ends-->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+<!-- this is comment-->
+
+</html>
